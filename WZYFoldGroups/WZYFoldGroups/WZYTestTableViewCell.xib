@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="WZYTestTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat_2" translatesAutoresizingMaskIntoConstraints="NO" id="e9q-mx-q6P" userLabel="iconImageView">
+                        <rect key="frame" x="20" y="5" width="60" height="59"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="A14-Nr-rCe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0a-U1-U02" userLabel="nameLabel">
+                        <rect key="frame" x="90" y="10" width="210" height="23"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Vayne">
+                                <attributes>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="16" name="PingFangSC-Medium"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-iB-7PI" userLabel="statusLabel">
+                        <rect key="frame" x="90" y="42" width="60" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="nlI-ab-KmK"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="[4G在线]">
+                                <attributes>
+                                    <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-xS-NSw" userLabel="supLabel">
+                        <rect key="frame" x="160" y="41" width="140" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="编辑个性签名 ...">
+                                <attributes>
+                                    <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="PingFangSC-Regular"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="V0a-U1-U02" secondAttribute="trailing" constant="20" id="ImZ-aM-A3i"/>
+                    <constraint firstItem="gzC-iB-7PI" firstAttribute="bottom" secondItem="e9q-mx-q6P" secondAttribute="bottom" constant="-5" id="KDR-qR-Do6"/>
+                    <constraint firstItem="V0a-U1-U02" firstAttribute="leading" secondItem="e9q-mx-q6P" secondAttribute="trailing" constant="10" id="N19-ea-q4l"/>
+                    <constraint firstItem="Xy7-xS-NSw" firstAttribute="leading" secondItem="gzC-iB-7PI" secondAttribute="trailing" constant="10" id="N92-BD-vmi"/>
+                    <constraint firstItem="Xy7-xS-NSw" firstAttribute="centerY" secondItem="gzC-iB-7PI" secondAttribute="centerY" id="PNw-CJ-DW5"/>
+                    <constraint firstItem="gzC-iB-7PI" firstAttribute="leading" secondItem="V0a-U1-U02" secondAttribute="leading" id="WC3-2e-pba"/>
+                    <constraint firstAttribute="trailing" secondItem="Xy7-xS-NSw" secondAttribute="trailing" constant="20" id="cD4-L9-ATE"/>
+                    <constraint firstAttribute="bottom" secondItem="e9q-mx-q6P" secondAttribute="bottom" constant="5" id="eiQ-fc-HOK"/>
+                    <constraint firstItem="e9q-mx-q6P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="iwz-Uz-yuV"/>
+                    <constraint firstItem="V0a-U1-U02" firstAttribute="top" secondItem="e9q-mx-q6P" secondAttribute="top" constant="5" id="pQj-Df-TN1"/>
+                    <constraint firstItem="e9q-mx-q6P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uI9-0C-6tB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="e9q-mx-q6P" id="opx-K6-sRO"/>
+                <outlet property="nameLabel" destination="V0a-U1-U02" id="9jM-Z7-bNe"/>
+                <outlet property="statusLabel" destination="gzC-iB-7PI" id="dOu-ow-EO3"/>
+                <outlet property="supLabel" destination="Xy7-xS-NSw" id="OQ6-6q-tr2"/>
+            </connections>
+            <point key="canvasLocation" x="8" y="-75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cat_2" width="550" height="400"/>
+    </resources>
+</document>
