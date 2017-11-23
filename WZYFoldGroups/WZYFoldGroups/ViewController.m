@@ -95,7 +95,7 @@ static NSString *mainCellId = @"mainCellId";
 
 /** 组头部高度 */
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
+    return 60;
 }
 
 /** 组尾部高度 */
@@ -107,27 +107,22 @@ static NSString *mainCellId = @"mainCellId";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     // 组头部 底层大view
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 40)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 60)];
     view.backgroundColor = [UIColor lightGrayColor];
     view.tag = section;
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, view.bounds.size.width, view.bounds.size.height)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, 0, view.bounds.size.width, view.bounds.size.height)];
     label.text = self.titlesArrM[section];
     [view addSubview:label];
     
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, (view.bounds.size.height - 30) / 2, 30, 30)];
+    [view addSubview:imageView];
     if ([[self.openSectionDictM valueForKey:[NSString stringWithFormat:@"%ld", section]] integerValue] == 0) {
-        //
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, (view.bounds.size.height - 10) / 2, 7, 10)];
         imageView.image = [UIImage imageNamed:@"Triangular_right"];
-        [view addSubview:imageView];
-    
     } else {
-        //
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, (view.bounds.size.height - 7) / 2, 10, 7)];
         imageView.image = [UIImage imageNamed:@"Triangular_up"];
-        [view addSubview:imageView];
     }
-    
+
     // 添加点击监听事件
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(collegeTaped:)];
     [view addGestureRecognizer:tap];
